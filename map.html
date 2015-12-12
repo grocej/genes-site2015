@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gene's Map</title>
+  <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+  <div class="topbar">FIND US HERE</div>
+  <div class="threemain">
+  <div class="leftside">
+  </div>
+  <div class="cont">
+    <!-- <div ng-controller="BeerController"> -->
+    <div id="map"><div data-width="320"></div></div>
+      <ng-view></ng-view>
+    <!-- </div> -->
+    <!-- <nav "mylogo"></nav> -->
+  </div>
+  <nav class="nav">
+    <ul class="main-nav-right">
+      <li><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></li>
+      <li><a href="/beer.html"><i class="fa fa-beer fa-3x fa-fw" title="Beer!"></i></a></li>
+      <li><a href="/food.html"><i class="fa fa-cutlery fa-3x fa-fw" title="Food!"></i></a></li>
+      <li><a href="/map.html"><i class="fa fa-map fa-3x fa-fw" title="Map!"></i></a></li>
+      <li><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></li>
+    </ul>
+  </nav>
+  </div>
+  <div class="footer">
+  <p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407 <i class="fa fa-facebook-official fa-2x fa-fw"></i></p>
+  <a href="http://www.jasonlgroce.com"><img id="mylogo" src="images/G-site_logo02.png" /></a>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map');
+      var mapOptions = {
+          center: new google.maps.LatLng(32.7820188,-79.9855854),
+          zoom: 17,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>

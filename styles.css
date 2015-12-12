@@ -1,0 +1,132 @@
+/*Possible colors : red: d80f0f, yellow: fbea48, gray: #5a5a5a
+*/
+body {
+  background-color: #fbea48;
+  margin: 0;
+  text-align: center;
+  padding-top: 1.7em;
+}
+@font-face {
+  font-family: 'Esphimere' Semi Bold.otf
+  src: url();
+}
+.cont {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  height: auto !important;
+  height: 50em;
+  order: 2;
+  white-space: nowrap;
+}
+#mylogo {
+  display: block;
+  max-height: 55px;
+  margin-right: 5%;
+  float: right;
+  color: #e1d242;
+}
+.topbar {
+  background-color: #fbea48;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 20px
+  width: 100%;
+  top: 0;
+  font-size: 3em;
+  font-family: Century Gothic, sans-serif;
+  color: #424242;
+}
+.footer {
+  height: 60px;
+  width: 100%;
+  /*bottom: 0;*/
+  position: fixed;
+  margin-top: 30px;
+}
+.foot-addy {
+  color: white;
+  margin: 0 auto;
+  font-family: Century Gothic, sans-serif;
+  font-size: .7em;
+  justify-content: flex-end;
+  text-align: center;
+}
+/*.topbar-shadow {
+  box-shadow: 0 8px 6px -6px #829bae;
+}*/
+.threemain {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.nav {
+  width: 20%;
+  order: 3;
+  text-align: justify;
+  height: 400px;
+  display: flex;
+  /*flex-direction: column;*/
+}
+.leftside {
+  order: 1;
+  width: 20%;
+  height: 400px;
+}
+.main-nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  left: 0;
+  list-style-type: none;
+}
+.fa {
+  display: block;
+  vertical-align: middle;
+  justify-content: center;
+  color: #424242;
+  text-align: center;
+  line-height: 2em;
+  transition: all .2s ease-in-out;
+  /*margin-bottom: .2em;*/
+}
+.fa:hover {
+   transform: scale(1.1);
+}
+#map {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+#findbeer {
+  width: 26em;
+  height: 36px;
+  margin: 0 auto;
+  background-color: #e1d242;
+  font-size: 14px;
+  border-style: none;
+  border-radius: 14px;
+  text-align: center;
+  font-family: Century Gothic, sans-serif;
+}
+::-webkit-input-placeholder {
+ color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+ color: white;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+ color: white;
+}
+:-ms-input-placeholder {
+ color: white;
+}
+#flipbook {
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+}
