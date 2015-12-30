@@ -15,13 +15,17 @@
     <!-- <div ng-controller="BeerController"> -->
       <ng-view></ng-view>
     <div id="flipbook">
-      <div class="hard"><a href="images/Burgers.png">Cover</a></div>
-      <div class="hard"><a href="images/Starters.png">Page 2</a></div>
-      <div class="hard"><a href="images/Burgers.png">Page 3</a></div>
-      <div class=""><a href="images/Sandwiches.png">Page 4</a></div>
-      <div class=""><a href="images/Domestic.png">Page 5</a></div>
-      <div class=""><a href="images/Imported.png">Page 6</a></div>
+      <div id="zoom-viewport" class="hard"></a></div>
+      <div id="zoom-viewport" class="hard"></div>
+      <div id="zoom-viewport"><img src="images/Starters-page.jpg" /></div>
+      <div id="zoom-viewport"><img src="images/Burgers_page.jpg" /></div>
+      <div id="zoom-viewport"><img src="images/Sandwiches_page.jpg" /></div>
+      <!-- <div id="zoom-viewport"><img src="images/Domestic_page.jpg" /></div>
+      <div id="zoom-viewport"><img src="images/Imported_page.jpg" /></div> -->
     </div>
+    <p id="directions">
+      Click on corners to turn the pages of the menu. <br/> Click on individual pages to zoom in.
+    </p>
     <!-- <nav "mylogo"></nav> -->
   </div>
   <nav class="nav">
@@ -42,6 +46,14 @@
 <script type="text/javascript" src="bower_components/turn.js/turn.js"></script>
 <script type="text/javascript">
   $('#flipbook').turn({
-      inclination: 20;
+      width: 750,
+		  height: 550,
+		  autoCenter: true,
+      acceleration: true,
+      duration: 100
+  });
+  $("#zoom-viewport").zoom({
+	flipbook: $("#flipbook"),
+	max: 3
   });
 </script>
