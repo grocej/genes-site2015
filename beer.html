@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Gene's Beer</title>
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <!-- <link type="text/javascript" href="beers.json"> -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
@@ -12,11 +13,13 @@
   <div class="threemain">
   <div class="leftside">
   </div>
-  <div class="cont">
+  <div class="cont" ng-controller="BeerController as beer">
     <input type="search" placeholder="start typing here to search our beer list" id="findbeer">
-    <div ng-controller="BeerController">
-
-      <div ng-view></div>
+    <div class="beeresults">
+      <ul>
+        <li ng-repeat="beer in beers">Finding {{beer.name}} {{beer.result.price | currency}} </li>
+      </ul>
+      <!-- <div ng-view></div> -->
     </div>
     <!-- <nav "mylogo"></nav> -->
   </div>
@@ -34,4 +37,10 @@
   <p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407 <i class="fa fa-facebook-official fa-2x fa-fw"></i></p>
   <a href="http://www.jasonlgroce.com"><img id="mylogo" src="images/G-site_logo02.png" /></a>
   </div>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script src="beers.json"></script>
+  <script src="app.js"></script>
+  <script src="service.js"></script>
+  <script src="controller.js"></script>
 </body>
