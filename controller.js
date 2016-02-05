@@ -86,7 +86,7 @@
       		}, {
       			"name": "Foster's",
       			"country": "Australia",
-      			"style": "lager",
+      			"style": "lager, 'australian for beer'",
       			"container": "can",
       			"abv": "5.0%",
       			"price": "7.00"
@@ -476,7 +476,7 @@
       		}, {
       			"name": "Anchor Steam",
       			"country": "USA",
-      			"style": "steam beer",
+      			"style": "steam ale",
       			"container": "bottle",
       			"abv": "4.9%",
       			"price": "4.00"
@@ -604,7 +604,7 @@
       			"name": "Dogfish Head Midas Touch",
       			"brewer": "Dogfish Head",
       			"country": "USA",
-      			"style": "spiced beer",
+      			"style": "spice",
       			"container": "bottle",
       			"abv": "9.0%",
       			"price": "7.00"
@@ -756,7 +756,7 @@
       			"abv": "5.8%",
       			"price": "4.50"
       		}, {
-      			"name": "Coors Banquet Beer",
+      			"name": "Coors Banquet",
       			"brewer": "Coors",
       			"country": "USA",
       			"style": "lager",
