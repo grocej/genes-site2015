@@ -128,7 +128,7 @@
       		}, {
       			"name": "Hofbrau Hefe",
       			"country": "Germany",
-      			"style": "wheat",
+      			"style": "wheat hefeweizen",
       			"container": "bottle",
       			"abv": "5.4%",
       			"price": "5.00"
@@ -184,14 +184,14 @@
       		}, {
       			"name": "Maisel's Weisse",
       			"country": "Germany",
-      			"style": "wheat",
+      			"style": "wheat hefeweizen",
       			"container": "bottle",
       			"abv": "5.4%",
       			"price": "4.50"
       		}, {
       			"name": "Maredsous",
       			"country": "Belgium",
-      			"style": "tripel",
+      			"style": "tripel, trippel",
       			"container": "bottle",
       			"abv": "10.0%",
       			"price": "8.00"
@@ -240,7 +240,7 @@
       		}, {
       			"name": "Paulaner Hefe",
       			"country": "Germany",
-      			"style": "wheat",
+      			"style": "wheat hefeweizen",
       			"container": "bottle",
       			"abv": "5.5%",
       			"price": "5.00"
@@ -266,16 +266,16 @@
       			"abv": "4.4%",
       			"price": "4.75"
       		}, {
-      			"name": "Pinkus Hefe",
+      			"name": "Pinkus Organic Hefe",
       			"country": "Germany",
-      			"style": "wheat",
+      			"style": "organic wheat hefeweizen",
       			"container": "bottle",
       			"abv": "5.1%",
       			"price": "9.00"
       		}, {
-      			"name": "Pinkus Pils",
+      			"name": "Pinkus Organic Pils",
       			"country": "Germany",
-      			"style": "pilsner",
+      			"style": "organic pilsner",
       			"container": "bottle",
       			"abv": "5.2%",
       			"price": "9.00"
@@ -401,7 +401,7 @@
       		}, {
       			"name": "Weihenstephaner Hefeweissbier",
       			"country": "Germany",
-      			"style": "wheat",
+      			"style": "wheat, hefeweizen",
       			"container": "bottle",
       			"abv": "5.4%",
       			"price": "4.50"
@@ -848,7 +848,7 @@
       			"abv": "4.28%",
       			"price": "3.25"
       		}, {
-      			"name": "Buckshot Amber",
+      			"name": "Natty Greene Buckshot Amber",
       			"brewer": "Natty Greene",
       			"country": "USA",
       			"style": "red amber ale",
@@ -865,7 +865,7 @@
       			"name": "New Belgium Snapshot Wheat",
       			"brewer": "New Belgium",
       			"country": "USA",
-      			"style": "wheat",
+      			"style": "wheat hefeweizen",
       			"abv": "5.0%",
       			"price": "4.75"
       		}, {
@@ -890,14 +890,14 @@
       			"abv": "9.7%",
       			"price": "8.00"
       		}, {
-      			"name": "Amber",
+      			"name": "Palmetto Amber",
       			"brewer": "Palmetto",
       			"country": "USA",
       			"style": "amber red",
       			"abv": "5.5%",
       			"price": "4.00"
       		}, {
-      			"name": "Blue Ribbon",
+      			"name": "Pabst Blue Ribbon",
       			"brewer": "Pabst",
       			"country": "USA",
       			"container": "bottle",
@@ -915,14 +915,14 @@
       			"abv": "4.74%",
       			"price": "2.00"
       		}, {
-      			"name": "Dead Guy Ale",
+      			"name": "Rogue Dead Guy Ale",
       			"brewer": "Rogue",
       			"country": "USA",
       			"style": "maibock, helles bock",
       			"abv": "6.5%",
       			"price": "6.50"
       		}, {
-      			"name": "Hazelnut Brown Nectar Ale",
+      			"name": "Rogue Hazelnut Brown Nectar Ale",
       			"brewer": "Rogue",
       			"country": "USA",
       			"style": "brown ale",
@@ -971,7 +971,7 @@
       			"abv": "4.4%",
       			"price": "4.00"
       		}, {
-      			"name": "Pale Ale",
+      			"name": "Sierra Pale Ale",
       			"brewer": "Sierra",
       			"country": "USA",
       			"style": "APA pale ale",
@@ -992,14 +992,14 @@
       			"abv": "",
       			"price": "13.00"
       		}, {
-      			"name": "Stone Ruination",
+      			"name": "Stone Ruination IPA",
       			"brewer": "Stone",
       			"country": "USA",
       			"style": "double pale ale IPA",
       			"abv": "8.5%",
       			"price": "13.00"
       		}, {
-      			"name": "Smoked Porter",
+      			"name": "Stone Smoked Porter",
       			"brewer": "Stone",
       			"country": "USA",
       			"style": "smoked porter",
@@ -1021,56 +1021,56 @@
       			"abv": "5.4%",
       			"price": "5.00"
       		}, {
-      			"name": "Dockside Pils",
+      			"name": "Thomas Creek Dockside Pils",
       			"brewer": "Thomas Creek",
       			"country": "USA",
       			"style": "pilsner",
       			"abv": "4.5%",
       			"price": "5.00"
       		}, {
-      			"name": "River Falls Red",
+      			"name": "Thomas Creek River Falls Red",
       			"brewer": "Thomas Creek",
       			"country": "USA",
-      			"style": "irish red ale",
+      			"style": "amber red ale",
       			"abv": "5.65%",
       			"price": "5.00"
       		}, {
-      			"name": "Up The Creek IPA",
+      			"name": "Thomas Creek Up The Creek IPA",
       			"brewer": "Thomas Creek",
       			"country": "USA",
       			"style": "american double, imperial pale ale IPA",
       			"abv": "12.5%",
       			"price": "7.50"
       		}, {
-      			"name": "Golden Monkey",
+      			"name": "Victory Golden Monkey",
       			"brewer": "Victory",
       			"country": "USA",
       			"style": "tripel, trippel",
       			"abv": "9.5%",
       			"price": "6.50"
       		}, {
-      			"name": "Hop Devil",
+      			"name": "Victory Hop Devil",
       			"brewer": "Victory",
       			"country": "USA",
       			"style": "pale ale IPA",
       			"abv": "6.7",
       			"price": "5.00"
       		}, {
-      			"name": "Gose",
+      			"name": "Westbrook Gose",
       			"brewer": "Westbrook",
       			"country": "USA",
       			"style": "gose, sour",
       			"abv": "4.0%",
       			"price": "6.00"
       		}, {
-      			"name": "White Thai",
+      			"name": "Westbrook White Thai",
       			"brewer": "Westbrook",
       			"country": "USA",
       			"style": "spice white ale, witbier",
       			"abv": "5.0%",
       			"price": "5.50"
       		}, {
-      			"name": "Granny Smith Cider",
+      			"name": "Woodchuck Granny Smith Cider",
       			"brewer": "Woodchuck",
       			"country": "USA",
       			"style": "cider",
@@ -1112,7 +1112,7 @@
       			"abv": "4.3%",
       			"price": "3.25"
       		}, {
-      			"name": "Michelob Ultra Light",
+      			"name": "Michelob Ultra",
       			"brewer": "Michelob",
       			"country": "USA",
       			"style": "light lager",
