@@ -142,7 +142,7 @@
       		}, {
       			"name": "Kaliber N/A",
       			"country": "Ireland",
-      			"style": "low alcohol lager",
+      			"style": "low alcohol lager non-alcoholic NA",
       			"container": "bottle",
       			"abv": "0.5%",
       			"price": "4.00"
@@ -170,14 +170,14 @@
       		}, {
       			"name": "Lindemans Framboise",
       			"country": "Belium",
-      			"style": "raspberry lambic",
+      			"style": "fruit raspberry lambic",
       			"container": "bottle",
       			"abv": "2.5%",
       			"price": "10.00"
       		}, {
       			"name": "Lindemans Kriek",
       			"country": "Belgium",
-      			"style": "cherry lambic",
+      			"style": "fruit cherry lambic",
       			"container": "bottle",
       			"abv": "4.0%",
       			"price": "10.00"

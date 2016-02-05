@@ -12,8 +12,27 @@ body {
   font-family: 'Esphimere' Semi Bold.otf
   src: url();
 }
+/*input
+textarea {
+  background-color: #e1d242;
+  border-radius: 10px;
+}*/
 li {
   list-style-type: none;
+}
+.mainLogo {
+  width: 100% !important;
+  margin: 0 auto;
+}
+#contactName,
+#contactEmail,
+#contactComment,
+#contactSub,
+#contactRes {
+  background-color: #e1d242;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 #beerName {
   font-size: 1.6em;
@@ -127,6 +146,7 @@ li {
 }
 #findbeer {
   width: 26em;
+  outline: none;
   height: 36px;
   margin: 0 auto;
   background-color: #e1d242;
