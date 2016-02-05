@@ -1,13 +1,11 @@
 (function() {
   'use strict';
   angular
-    .module('genes', ['ngRoute','underscore'])
+    .module('genes', ['ngRoute'])
     .controller('BeerController', function ($scope) {
-      // $http.get('beers.json')//
 
-      $scope.beer =
-      {
-      	 "beerlist": [
+      var beerlist = [
+
           {
       			"name": "Amstel Light",
       			"country": "Netherlands",
@@ -172,14 +170,14 @@
       		}, {
       			"name": "Lindemans Framboise",
       			"country": "Belium",
-      			"style": "lambic",
+      			"style": "raspberry lambic",
       			"container": "bottle",
       			"abv": "2.5%",
       			"price": "10.00"
       		}, {
       			"name": "Lindemans Kriek",
       			"country": "Belgium",
-      			"style": "lambic",
+      			"style": "cherry lambic",
       			"container": "bottle",
       			"abv": "4.0%",
       			"price": "10.00"
@@ -298,7 +296,7 @@
       		}, {
       			"name": "Samuel Smith's India Ale",
       			"country": "England",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "bottle",
       			"abv": "5.0%",
       			"price": "9.00"
@@ -429,14 +427,14 @@
       			"abv": "5.2%",
       			"price": "6.00"
       		}, {
-      			"name": "1554 Black Lager",
+      			"name": "New Belgium 1554 Black Lager",
       			"country": "USA",
       			"style": "black lager",
       			"container": "bottle",
       			"abv": "5.6%",
       			"price": "4.75"
       		}, {
-      			"name": "Amber",
+      			"name": "Abita Amber",
       			"brewer": "Abita",
       			"country": "USA",
       			"style": "vienna amber lager",
@@ -444,7 +442,7 @@
       			"abv": "4.5%",
       			"price": "4.25"
       		}, {
-      			"name": "Andygator",
+      			"name": "Abita Andygator",
       			"brewer": "Abita",
       			"country": "USA",
       			"style": "bock",
@@ -452,7 +450,7 @@
       			"abv": "8.0%",
       			"price": "6.00"
       		}, {
-      			"name": "Purple Haze",
+      			"name": "Abita Purple Haze",
       			"brewer": "Abita",
       			"country": "USA",
       			"style": "raspberry wheat",
@@ -460,7 +458,7 @@
       			"abv": "4.2%",
       			"price": "4.25"
       		}, {
-      			"name": "Turbodog",
+      			"name": "Abita Turbodog",
       			"brewer": "Abita",
       			"country": "USA",
       			"style": "brown ale",
@@ -483,15 +481,15 @@
       			"abv": "4.9%",
       			"price": "4.00"
       		}, {
-      			"name": "Grapefruit Sculpin",
+      			"name": "Ballast Point Grapefruit Sculpin",
       			"country": "USA",
       			"brewer": "Ballast Point",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "can",
       			"abv": "7.0%",
       			"price": "7.00"
       		}, {
-      			"name": "Amber",
+      			"name": "Bell's Amber",
       			"brewer": "Bell's",
       			"country": "USA",
       			"style": "amber red ale",
@@ -499,7 +497,7 @@
       			"abv": "5.8%",
       			"price": "5.00"
       		}, {
-      			"name": "Porter",
+      			"name": "Bell's Porter",
       			"brewer": "Bell's",
       			"country": "USA",
       			"style": "porter",
@@ -507,22 +505,22 @@
       			"abv": "5.6%",
       			"price": "5.00"
       		}, {
-      			"name": "Two Hearted",
+      			"name": "Bell's Two Hearted",
       			"brewer": "Bell's",
       			"country": "USA",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "bottle",
       			"abv": "7.0%",
       			"price": "5.00"
       		}, {
       			"name": "Blue Moon",
       			"country": "USA",
-      			"style": "white ale",
+      			"style": "white ale, witbier",
       			"container": "bottle",
       			"abv": "5,4%",
       			"price": "4.50"
       		}, {
-      			"name": "Brown Ale",
+      			"name": "Brooklyn Brown Ale",
       			"brewer": "Brooklyn",
       			"country": "USA",
       			"style": "brown ale",
@@ -530,7 +528,7 @@
       			"abv": "5.6%",
       			"price": "5.00"
       		}, {
-      			"name": "Lager",
+      			"name": "Brooklyn Lager",
       			"brewer": "Brooklyn",
       			"country": "USA",
       			"style": "amber red lager",
@@ -538,7 +536,7 @@
       			"abv": "5.2%",
       			"price": "5.00"
       		}, {
-      			"name": "Organic Pils",
+      			"name": "Butte Creek Organic Pils",
       			"brewer": "Butte Creek",
       			"country": "USA",
       			"style": "pilsner",
@@ -546,15 +544,15 @@
       			"abv": "4.5%",
       			"price": "4.50"
       		}, {
-      			"name": "Organic IPA",
+      			"name": "Butte Creek Organic IPA",
       			"brewer": "Butte Creek",
       			"country": "USA",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "bottle",
       			"abv": "6.7%",
       			"price": "4.50"
       		}, {
-      			"name": "Kolsch",
+      			"name": "Coast Kolsch",
       			"brewer": "Coast",
       			"country": "USA",
       			"style": "kolsch",
@@ -562,15 +560,16 @@
       			"abv": "4.8%",
       			"price": "6.50"
       		}, {
-      			"name": "Hopnotic",
+      			"name": "Cricket Hill Hopnotic",
+            "brewer": "Cricket Hill",
       			"country": "USA",
       			"state": "NJ",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "bottle",
       			"abv": "6.5%",
       			"price": "6.00"
       		}, {
-      			"name": "Cider",
+      			"name": "Crispin Cider",
       			"brewer": "Crispin",
       			"country": "USA",
       			"style": "cider",
@@ -578,7 +577,7 @@
       			"abv": "5.0%",
       			"price": "5.50"
       		}, {
-      			"name": "Pear Cider",
+      			"name": "Crispin Pear Cider",
       			"brewer": "Crispin",
       			"country": "USA",
       			"style": "pear cider",
@@ -594,15 +593,15 @@
       			"abv": "6.5%",
       			"price": "5.00"
       		}, {
-      			"name": "90 Minute IPA",
+      			"name": "Dogfish Head 90 Minute IPA",
       			"brewer": "Dogfish Head",
       			"country": "USA",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "bottle",
       			"abv": "9.0%",
       			"price": "7.00"
       		}, {
-      			"name": "Midas Touch",
+      			"name": "Dogfish Head Midas Touch",
       			"brewer": "Dogfish Head",
       			"country": "USA",
       			"style": "spiced beer",
@@ -610,7 +609,7 @@
       			"abv": "9.0%",
       			"price": "7.00"
       		}, {
-      			"name": "Palo Santo Marron",
+      			"name": "Dogfish Head Palo Santo Marron",
       			"brewer": "Dogfish Head",
       			"country": "USA",
       			"style": "brown ale",
@@ -618,7 +617,7 @@
       			"abv": "12.0%",
       			"price": "7.00"
       		}, {
-      			"name": "Milk Stout",
+      			"name": "Duck Rabbit Milk Stout",
       			"brewer": "Duck Rabbit",
       			"country": "USA",
       			"style": "milk stout",
@@ -626,7 +625,7 @@
       			"abv": "5.7%",
       			"price": "5.00"
       		}, {
-      			"name": "Fat Tire",
+      			"name": "New Belgium Fat Tire",
       			"brewer": "New Belgium",
       			"country": "USA",
       			"style": "red ale",
@@ -634,7 +633,7 @@
       			"abv": "5.2% ",
       			"price": "4.75"
       		}, {
-      			"name": "Carolina Blonde",
+      			"name": "Foothills Carolina Blonde",
       			"brewer": "Foothills",
       			"country": "USA",
       			"style": "blonde ale",
@@ -642,15 +641,15 @@
       			"abv": "4.3%",
       			"price": "4.75"
       		}, {
-      			"name": "Hoppyum",
+      			"name": "Foothills Hoppyum",
       			"brewer": "Foothills",
       			"country": "USA",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "bottle",
       			"abv": "6.3%",
       			"price": "5.00"
       		}, {
-      			"name": "People's Porter",
+      			"name": "Foothills People's Porter",
       			"brewer": "Foothills",
       			"country": "USA",
       			"style": "porter",
@@ -658,168 +657,166 @@
       			"abv": "5.8%",
       			"price": "5.00"
       		}, {
-      			"name": "All Day IPA",
+      			"name": "Founder's All Day IPA",
       			"brewer": "Founder's",
       			"country": "USA",
-      			"style": "IPA",
+      			"style": "pale ale IPA",
       			"container": "can",
       			"abv": "4.7%",
       			"price": "5.00"
       		}, {
-      			"name": "Porter",
+      			"name": "Founder's Porter",
       			"brewer": "Founder's",
       			"country": "USA",
       			"style": "porter",
       			"abv": "6.5%",
       			"price": "5.00"
       		}, {
-      			"name": "Honker's Ale",
+      			"name": "Goose Island Honker's Ale",
       			"brewer": "Goose Island",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "bitter ale",
+      			"abv": "4.3%",
       			"price": "4.50"
       		}, {
-      			"name": "IPA",
+      			"name": "Goose Island IPA",
       			"brewer": "Goose Island",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "5.9%",
       			"price": "4.50"
       		}, {
-      			"name": "Denver Pale Ale",
+      			"name": "Great Divide Denver Pale Ale",
       			"brewer": "Great Divide",
       			"country": "USA",
       			"style": "pale ale",
-      			"abv": "",
+      			"abv": "5.4%",
       			"price": "5.00"
       		}, {
-      			"name": "Claymore",
+      			"name": "Great Divide Claymore Scotch Ale",
       			"brewer": "Great Divide",
       			"country": "USA",
       			"style": "scotch ale",
-      			"abv": "",
+      			"abv": "7.7%",
       			"price": "6.50"
       		}, {
-      			"name": "Yeti",
+      			"name": "Great Divide Yeti Imperial Stout",
       			"brewer": "Great Divide",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "imperial stout",
+      			"abv": "9.5%",
       			"price": "9.50"
       		}, {
-      			"name": "Hercules Double IPA",
+      			"name": "Great Divide Hercules Double IPA",
       			"brewer": "Great Divide",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "double imperial pale ale IPA",
+      			"abv": "10.0%",
       			"price": "9.50"
       		}, {
-      			"name": "Hop Head Red",
+      			"name": "Green Flash Hop Head Red",
       			"brewer": "Green Flash",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "double imperial pale ale IPA",
+      			"abv": "8.1%",
       			"price": "6.75"
       		}, {
-      			"name": "West Coast IPA",
+      			"name": "Green Flash West Coast IPA",
       			"brewer": "Green Flash",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "double imperial pale ale IPA",
+      			"abv": "8.1%",
       			"price": "6.75"
       		}, {
       			"name": "Harpoon IPA",
       			"brewer": "Harpoon",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "5.9%",
       			"price": "4.50"
       		}, {
-      			"name": "Gaelic Ale",
+      			"name": "Highland Gaelic Ale",
       			"brewer": "Highland",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "amber red ale",
+      			"abv": "5.8%",
       			"price": "4.50"
       		}, {
-      			"name": "Kashmir",
+      			"name": "Highland Kashmir",
       			"brewer": "Highland",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "6.0%",
       			"price": "4.50"
       		}, {
-      			"name": "Oatmeal Porter",
+      			"name": "Highland Oatmeal Porter",
       			"brewer": "Highland",
       			"country": "USA",
       			"style": "porter",
-      			"abv": "",
+      			"abv": "5.8%",
       			"price": "4.50"
-      		},
-
-      		{
+      		}, {
       			"name": "Coors Banquet Beer",
       			"brewer": "Coors",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "5.0%",
       			"price": "3.25"
       		}, {
       			"name": "Coors Light",
       			"brewer": "Coors",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "light lager",
+      			"abv": "4.2%",
       			"price": "3.25"
       		}, {
       			"name": "High Life",
       			"brewer": "Miller Brewing",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "4.6%",
       			"price": "2.50"
       		}, {
       			"name": "High Life Light",
       			"brewer": "Miller Brewing",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "light lager",
+      			"abv": "4.5%",
       			"price": "2.50"
       		}, {
       			"name": "Iron City",
       			"brewer": "Iron City",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "4.5%",
       			"price": "3.25"
       		}, {
       			"name": "Lagunitas IPA",
       			"brewer": "Lagunitas",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "6.2%",
       			"price": "5.00"
       		}, {
-      			"name": "Pecan Brown",
+      			"name": "Lazy Magnolia Pecan Brown",
       			"brewer": "Lazy Magnolia",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "brown ale",
+      			"abv": "4.5%",
       			"price": "5.00"
       		}, {
-      			"name": "Milk Stout",
+      			"name": "Left Hand Milk Stout",
       			"brewer": "Left Hand",
       			"country": "USA",
       			"style": "milk stout",
-      			"abv": "",
+      			"abv": "6.0%",
       			"price": "5.50"
       		}, {
-      			"name": "#9",
+      			"name": "Magic Hat #9",
       			"brewer": "Magic Hat",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "fruit ale",
+      			"abv": "5.1%",
       			"price": "4.50"
       		}, {
       			"name": "Mama's Little Yella Pils",
@@ -833,71 +830,71 @@
       			"brewer": "Oskar Blues",
       			"country": "USA",
       			"style": "scotch ale",
-      			"abv": "",
+      			"abv": "8.0%",
       			"price": "5.00"
       		}, {
       			"name": "Mickey's Big Mouth",
       			"brewer": "Mickey's",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "malt liquor",
+      			"abv": "5.6%",
       			"price": "3.00"
       		}, {
       			"name": "National Bohemian",
       			"brewer": "National Bohemian",
       			"nickname": "Natty Bo",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "4.28%",
       			"price": "3.25"
       		}, {
       			"name": "Buckshot Amber",
       			"brewer": "Natty Greene",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "red amber ale",
+      			"abv": "4.9%",
       			"price": "5.00"
       		}, {
-      			"name": "Ranger IPA",
+      			"name": "New Belgium Ranger IPA",
       			"brewer": "New Belgium",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "6.5%",
       			"price": "4.75"
       		}, {
-      			"name": "Snapshot Wheat",
+      			"name": "New Belgium Snapshot Wheat",
       			"brewer": "New Belgium",
       			"country": "USA",
       			"style": "wheat",
-      			"abv": "",
+      			"abv": "5.0%",
       			"price": "4.75"
       		}, {
-      			"name": "Trippel",
+      			"name": "New Belgium Trippel",
       			"brewer": "New Belgium",
       			"country": "USA",
-      			"style": "belgian trippel",
+      			"style": "belgian trippel, tripel",
       			"abv": "7.8%",
       			"price": "5.00"
       		}, {
-      			"name": "Abbey Ale",
+      			"name": "Ommegang Abbey Ale",
       			"brewer": "Ommegang",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "abbey dubbel ale",
+      			"abv": "8.2%",
       			"price": "5.00"
       		}, {
-      			"name": "Three Philosopher's",
+      			"name": "Ommegang Three Philosopher's",
       			"brewer": "Ommegang",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "quadrupel",
+      			"abv": "9.7%",
       			"price": "8.00"
       		}, {
       			"name": "Amber",
       			"brewer": "Palmetto",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "amber red",
+      			"abv": "5.5%",
       			"price": "4.00"
       		}, {
       			"name": "Blue Ribbon",
@@ -905,234 +902,227 @@
       			"country": "USA",
       			"container": "bottle",
       			"nickname": "PBR",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "4.74%",
       			"price": "2.50"
       		}, {
-      			"name": "Blue Ribbon",
+      			"name": "Pabst Blue Ribbon",
       			"brewer": "Pabst",
       			"country": "USA",
       			"container": "can",
       			"nickname": "PBR",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "4.74%",
       			"price": "2.00"
       		}, {
       			"name": "Dead Guy Ale",
       			"brewer": "Rogue",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "maibock, helles bock",
+      			"abv": "6.5%",
       			"price": "6.50"
       		}, {
-      			"name": "Hazelnut Brown Ale",
+      			"name": "Hazelnut Brown Nectar Ale",
       			"brewer": "Rogue",
       			"country": "USA",
       			"style": "brown ale",
-      			"abv": "",
+      			"abv": "6.2%",
       			"price": "6.50"
       		}, {
-      			"name": "Rolling Rock",
-      			"brewer": "",
+      			"name": "Rolling Rock Extra Pale",
+      			"brewer": "Latrobe",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "lager",
+      			"abv": "4.6%",
       			"price": "3.25"
       		}, {
       			"name": "Sam Adams Lager",
-      			"brewer": "Sam Adams",
+      			"brewer": "Boston Beer Company Sam Adams",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "vienna lager",
+      			"abv": "4.9%",
       			"price": "4.50"
       		}, {
       			"name": "Sam Adams Light",
-      			"brewer": "Sam Adams",
+      			"brewer": "Boston Beer Company Sam Adams",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "light lager",
+      			"abv": "4.0%",
       			"price": "4.50"
       		}, {
       			"name": "Sam Adams Rebel IPA",
-      			"brewer": "Sam Adams",
+      			"brewer": "Boston Beer Company Sam Adams",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "6.5%",
       			"price": "4.50"
       		}, {
-      			"name": "Organic Cider",
+      			"name": "Scrumpy's Organic Cider",
       			"brewer": "Scrumpy's",
       			"country": "USA",
       			"style": "cider",
-      			"abv": "",
+      			"abv": "6.0%",
       			"price": "11.00"
       		}, {
       			"name": "Shiner Bock",
-      			"brewer": "Shiner",
+      			"brewer": "Spoetzl Shiner",
       			"country": "USA",
       			"style": "bock",
-      			"abv": "",
+      			"abv": "4.4%",
       			"price": "4.00"
       		}, {
       			"name": "Pale Ale",
       			"brewer": "Sierra",
       			"country": "USA",
-      			"style": "pale ale",
-      			"abv": "",
+      			"style": "APA pale ale",
+      			"abv": "5.6%",
       			"price": "4.00"
       		}, {
       			"name": "Smith & Forge Hard Cider",
       			"brewer": "Smith & Forge",
       			"country": "USA",
       			"style": "cider",
-      			"abv": "",
+      			"abv": "6%",
       			"price": "5.50"
       		}, {
-      			"name": "Arrogant Bastard",
+      			"name": "Stone Arrogant Bastard",
       			"brewer": "Stone",
       			"country": "USA",
       			"style": "",
       			"abv": "",
       			"price": "13.00"
       		}, {
-      			"name": "Ruination",
+      			"name": "Stone Ruination",
       			"brewer": "Stone",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "double pale ale IPA",
+      			"abv": "8.5%",
       			"price": "13.00"
       		}, {
       			"name": "Smoked Porter",
       			"brewer": "Stone",
       			"country": "USA",
       			"style": "smoked porter",
-      			"abv": "",
+      			"abv": "5.9%",
       			"price": "12.00"
       		}, {
-      			"name": "Blue",
+      			"name": "Sweetwater Blue",
       			"brewer": "Sweetwater",
       			"country": "USA",
-      			"style": "***",
-      			"abv": "",
+      			"style": "fruit ale, blueberry",
+      			"abv": "4.9%",
       			"price": "5.00"
       		}, {
-      			"name": "420",
+      			"name": "Sweetwater 420",
       			"brewer": "Sweetwater",
       			"country": "USA",
       			"container": "can",
-      			"style": "fruit ale",
-      			"abv": "4.6%",
+      			"style": "pale ale",
+      			"abv": "5.4%",
       			"price": "5.00"
       		}, {
       			"name": "Dockside Pils",
       			"brewer": "Thomas Creek",
       			"country": "USA",
       			"style": "pilsner",
-      			"abv": "",
+      			"abv": "4.5%",
       			"price": "5.00"
       		}, {
       			"name": "River Falls Red",
       			"brewer": "Thomas Creek",
       			"country": "USA",
-      			"style": "red ale",
-      			"abv": "",
+      			"style": "irish red ale",
+      			"abv": "5.65%",
       			"price": "5.00"
       		}, {
       			"name": "Up The Creek IPA",
       			"brewer": "Thomas Creek",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "american double, imperial pale ale IPA",
+      			"abv": "12.5%",
       			"price": "7.50"
       		}, {
       			"name": "Golden Monkey",
       			"brewer": "Victory",
       			"country": "USA",
-      			"style": "",
-      			"abv": "",
+      			"style": "tripel, trippel",
+      			"abv": "9.5%",
       			"price": "6.50"
       		}, {
       			"name": "Hop Devil",
       			"brewer": "Victory",
       			"country": "USA",
-      			"style": "IPA",
-      			"abv": "",
+      			"style": "pale ale IPA",
+      			"abv": "6.7",
       			"price": "5.00"
       		}, {
       			"name": "Gose",
       			"brewer": "Westbrook",
       			"country": "USA",
-      			"style": "gose sour",
-      			"abv": "",
+      			"style": "gose, sour",
+      			"abv": "4.0%",
       			"price": "6.00"
       		}, {
       			"name": "White Thai",
       			"brewer": "Westbrook",
       			"country": "USA",
-      			"style": "spice white ale",
-      			"abv": "",
+      			"style": "spice white ale, witbier",
+      			"abv": "5.0%",
       			"price": "5.50"
       		}, {
       			"name": "Granny Smith Cider",
       			"brewer": "Woodchuck",
       			"country": "USA",
       			"style": "cider",
-      			"abv": "",
+      			"abv": "5.0%",
       			"price": "4.50"
       		}, {
       			"name": "Yuengling Lager",
       			"brewer": "Yuengling",
       			"country": "USA",
-      			"style": "lager",
-      			"abv": "",
+      			"style": "red lager",
+      			"abv": "4.4%",
       			"price": "3.00"
       		}, {
       			"name": "Yuengling Light",
       			"brewer": "Yuengling",
       			"country": "USA",
       			"style": "light lager",
-      			"abv": "",
+      			"abv": "3.2%",
       			"price": "3.00"
       		}, {
       			"name": "Miller Lite",
       			"brewer": "Miller Brewing",
       			"country": "USA",
       			"style": "light lager",
-      			"abv": "",
+      			"abv": "4.17%",
       			"price": "3.25"
       		}, {
       			"name": "Budweiser",
       			"brewer": "Budweiser",
       			"country": "USA",
       			"style": "lager",
-      			"abv": "",
+      			"abv": "5.0%",
       			"price": "3.25"
       		}, {
       			"name": "Michelob Light",
       			"brewer": "Michelob",
       			"country": "USA",
       			"style": "light lager",
-      			"abv": "",
+      			"abv": "4.3%",
       			"price": "3.25"
       		}, {
       			"name": "Michelob Ultra Light",
       			"brewer": "Michelob",
       			"country": "USA",
       			"style": "light lager",
-      			"abv": "",
+      			"abv": "4.2%",
       			"price": "3.25"
       		}
       	]
-      };
-      $scope.results = [];
-
-      // $scope.findBeer = function(enteredBeer) {
-      //   angular.forEach($scope.beer.name, function(value, key) {
-      //     if (key === enteredBeer) {
-      //       $scope.results.push({name: key, price: value[0].name})
-      //     }
-      //   })
-      // };
+        $scope.beers = beerlist;
+        $scope.results = [];
+      })
 }());
 
 // App.controller('ScoreboardCtrl', function($scope, $http) {
