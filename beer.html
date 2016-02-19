@@ -5,40 +5,51 @@
   <title>Gene's Beer</title>
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body ng-app="genes">
-  <div class="topbar">BEER</div>
-  <div class="threemain">
-  <div class="leftside">
-  </div>
-  <div class="cont" ng-controller="BeerController">
-    <input type="search" placeholder="start typing here to search our beer list" id="findbeer" ng-model="searchBeer">
-    <div class="beeresults">
-      <p>Finding...</p>
-      <ul ng-show="searchBeer">
-
-        <li ng-repeat="beer in beers | filter:searchBeer | limitTo:15"><span id="beerName">{{beer.name}}</span>
-           <span id="beerAbv">abv: {{beer.abv}}</span>
-           <span id="beerPrice">{{beer.price | currency}}</span> </li>
-        <p> ...more may be available. Narrow your search to see!</p>
-      </ul>
+  <div class="container-fluid">
+    <div class="row top">
+      <div class="col-xs-12 col-md-12" id="welcome">GENE'S  BEER</div>
+    </div>
+    <!-- <ng-view></ng-view> -->
+    <div class="row nav">
+      <div class="col-xs-3"><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></div>
+      <div class="col-xs-2"><a href="/beer.html"><i class="fa fa-beer fa-3x fa-fw" title="Beer!"></i></a></div>
+      <div class="col-xs-2"><a href="/food.html"><i class="fa fa-cutlery fa-3x fa-fw" title="Food!"></i></a></div>
+      <div class="col-xs-2"><a href="/map.html"><i class="fa fa-map fa-3x fa-fw" title="Map!"></i></a></div>
+      <div class="col-xs-3"><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></div>
+    </div>
+    <div class="row beer" ng-controller="BeerController">
+      <div class="col-xs-1 col-md-3"></div>
+      <div class="col-xs-10 col-md-6" id="menuBox">
+        <input type="search" placeholder="start typing here to search our beer list" id="findbeer" ng-model="searchBeer">
+        <div class="beeresults">
+          <br>
+          <p class="finding">Finding...</p>
+          <ul ng-show="searchBeer">
+            <li class="bList" ng-repeat="beer in beers | filter:searchBeer | limitTo:15">
+              <span id="beerName">{{beer.name}}</span>
+              <span id="beerAbv">abv: {{beer.abv}}</span>
+              <span id="beerPrice">{{beer.price | currency}}</span>
+            </li>
+          </ul>
+          <p class="moreMay"> ...more may be available.<br> Narrow your search to see!</p>
+        </div>
+      </div>
+      <div class="col-xs-1 col-md-3"></div>
+    </div>
+    <div class="row foot">
+      <div class="col-xs-2 col-md-4"></div>
+      <div class="col-xs-8 col-md-4"><p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407  <br><i class="fa fa-facebook-official fa-2x fa-fw"></i></p></div>
+      <div class="col-xs-2 col-md-4" id="myLogo"><a href="mailto:grocej@gmail.com?subject=I saw the Gene's site!"><img id="mylogo" src="images/G-site_logo02.png" /></a></div>
     </div>
   </div>
-  <nav class="nav">
-    <ul class="main-nav-right">
-      <li><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></li>
-      <li><a href="/beer.html"><i class="fa fa-beer fa-3x fa-fw" title="Beer!"></i></a></li>
-      <li><a href="/food.html"><i class="fa fa-cutlery fa-3x fa-fw" title="Food!"></i></a></li>
-      <li><a href="/map.html"><i class="fa fa-map fa-3x fa-fw" title="Map!"></i></a></li>
-      <li><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></li>
-    </ul>
-  </nav>
-  </div>
-  <div class="footer">
-  <p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407 <i class="fa fa-facebook-official fa-2x fa-fw"></i></p>
-  <a href="mailto:grocej@gmail.com?subject=I saw the Gene's site!"><img id="mylogo" src="images/G-site_logo02.png" /></a>
-  </div>
+
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
   <script src="beers.json"></script>

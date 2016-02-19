@@ -5,41 +5,48 @@
   <title>Gene's Contact</title>
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-  <div class="topbar">ASK US, TELL US</div>
-  <div class="threemain">
-  <div class="leftside">
-  </div>
-  <div class="cont">
-    <p class="togo">Place a To Go Order anytime between 11:30am until 1am, 7 days a week!<br /><span class="phone">Call 843.670.2521</span><br /><br />or come see us at:<br /><br /><span class="phone">817 Savannah Highway<br />Charleston SC 29407</span></p>
-    <!-- <div ng-controller="BeerController"> -->
-      <ng-view></ng-view>
-      <h2>Send a nice message to Us!</h2>
-
+<body ng-app="genes">
+  <ng-view></ng-view>
+  <div class="container-fluid">
+    <div class="row top">
+      <div class="col-xs-12 col-md-12" id="welcome">ASK  US,  TELL  US</div>
+    </div>
+    <div class="row nav">
+      <div class="col-xs-3"><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></div>
+      <div class="col-xs-2"><a href="/beer.html"><i class="fa fa-beer fa-3x fa-fw" title="Beer!"></i></a></div>
+      <div class="col-xs-2"><a href="/food.html"><i class="fa fa-cutlery fa-3x fa-fw" title="Food!"></i></a></div>
+      <div class="col-xs-2"><a href="/map.html"><i class="fa fa-map fa-3x fa-fw" title="Map!"></i></a></div>
+      <div class="col-xs-3"><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></div>
+    </div>
+    <div class="row contact">
+      <div class="col-xs-2 col-md-3" id=""></div>
+      <div class="col-xs-8 col-md-6" id="menuBox">
+        <p class="togo">Place a To Go Order anytime between 11:30am until 1am,<br> 7 days a week!</p><br />
+          <span class="phone">Call 843.670.2521</span><br/ ><br />or come see us at:<br /><br />
+          <span class="phone">817 Savannah Highway<br/ >Charleston SC 29407</span>
+        <h3>Send a nice message to Us!</h2>
         <form action="MAILTO:grocej@gmail.com" method="post" enctype="text/plain">
         Your Name:<br>
-        <input id="contactName" type="text" name="Name " + "  "><br>
-        Your E-mail:<br>
-        <input id="contactEmail"type="text" name="Email " + "  "><br>
-        Your Comment:<br>
-        <textarea id="contactComment" cols="40" rows="5"></textarea><br><br>
-        <input id="contactSub"type="submit" value="Send">
-        <input id="contactRes"type="reset" value="Reset">
+          <input id="contactName" type="text" name="Name " + "  "><br>
+          Your E-mail:<br>
+          <input id="contactEmail" type="text" name="Email " + "  "><br><br>
+          <input id="contactSub" type="submit" value="Send">
+          <input id="contactRes" type="reset" value="Reset">
         </form>
-    <!-- <nav "mylogo"></nav> -->
+      </div>
+      <div class="col-xs-2 col-md-3"></div>
+    </div>
+    <div class="row foot">
+      <div class="col-xs-2 col-md-4"></div>
+      <div class="col-xs-8 col-md-4"><p class="foot-addy">817 SAVANNAH HWY <br>CHARLESTON SC 29407  <i class="fa fa-facebook-official fa-2x fa-fw"></i></p></div>
+      <div class="col-xs-2 col-md-4" id="myLogo"><a href="http://www.jasonlgroce.com"><img id="mylogo" src="images/G-site_logo02.png" /></a></div>
+    </div>
   </div>
-  <nav class="nav">
-    <ul class="main-nav-right">
-      <li><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></li>
-      <li><a href="/beer.html"><i class="fa fa-beer fa-3x fa-fw" title="Beer!"></i></a></li>
-      <li><a href="/food.html"><i class="fa fa-cutlery fa-3x fa-fw" title="Food!"></i></a></li>
-      <li><a href="/map.html"><i class="fa fa-map fa-3x fa-fw" title="Map!"></i></a></li>
-      <li><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></li>
-    </ul>
-  </nav>
-  </div>
-  <div class="footer">
-  <p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407 <i class="fa fa-facebook-official fa-2x fa-fw"></i></p>
-  <a href="mailto:grocej@gmail.com?subject=I saw the Gene's site!"><img id="mylogo" src="images/G-site_logo02.png" /></a>
-  </div>
+
+
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
