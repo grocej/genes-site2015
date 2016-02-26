@@ -1,0 +1,315 @@
+[{
+	"name": "Artichoke Dip *",
+	"category": "starter app appetizer",
+	"ingredients": "artichoke pita wedges",
+	"description": "served with toasted pita wedges",
+	"price": "8.95",
+  "prep": "baked",
+  "happy hour": true
+}, {
+  "name": "Fried Green Tomatoes *",
+	"category": "starter app appetizer",
+	"ingredients": "fried green tomatoes pimiento cheese",
+	"description": "served with house-made pimiento cheese",
+  "prep": "fried",
+	"price": "7.95",
+  "happy hour": true
+}, {
+  "name": "Cajun Fried Crawdads",
+	"category": "starter app appetizer",
+	"ingredients": "crawdad tails jalapeno tartar sauce",
+	"description": "served with jalapeno tartar sauce",
+  "prep": "fried",
+	"price": "10.50",
+  "happy hour": false
+}, {
+  "name": "Fried Mushrooms *",
+	"category": "starter app appetizer",
+	"ingredients": "mushrooms beer batter ranch dressing",
+	"description": "deep fried in beer batter with a side of ranch",
+  "prep": "fried",
+	"price": "7.95",
+  "happy hour": true
+}, {
+  "name": "Chicken Fingers *",
+	"category": "starter app appetizer",
+	"ingredients": "chicken honey mustard",
+	"description": "served with honey mustard",
+  "prep": "fried",
+	"price": "8.50",
+  "happy hour": true
+}, {
+  "name": "Chicken Quesadilla *",
+	"category": "starter app appetizer",
+	"ingredients": "chicken jack cheese green peppers onions pico de gallo sour cream",
+	"description": "tortillas stuffed with chicken, jack cheese, green peppers and onions, served with pico de gallo and sour cream",
+  "prep": "grilled",
+	"price": "8.50",
+  "happy hour": true
+}, {
+  "name": "Corn Dogs",
+	"category": "starter app appetizer",
+	"ingredients": "corn dogs spicy mustard",
+	"description": "two regular-sized dogs, served with spicy mustard",
+  "prep": "fried",
+	"price": "4.95",
+  "happy hour": false
+}, {
+  "name": "Roasted Red Pepper Hummus *",
+	"category": "starter app appetizer",
+	"ingredients": "hummus pita wedges",
+	"description": "with diced cucumbers, served with pita wedges",
+  "prep": "grilled",
+	"price": "7.95",
+  "happy hour": true
+}, {
+  "name": "Vegetable Spring Rolls *",
+	"category": "starter app appetizer",
+	"ingredients": "spring rolls sesame dressing spicy mustard",
+	"description": "served with sesame dressing and spicy mustard",
+  "prep": "fried",
+	"price": "7.95",
+  "happy hour": true
+}, {
+  "name": "Loaded Fries *",
+	"category": "starter app appetizer",
+	"ingredients": "french fries bacon cheddar cheese scallions ranch dressing",
+	"description": "with melted cheddar, bacon, scallions, and a side of ranch",
+  "prep": "fried",
+	"price": "9.95",
+  "add-ons": "Add sour cream or jalapenos for $.75 each",
+  "happy hour": true
+}, {
+  "name": "Wings - Dry Flavors",
+	"category": "wings starter app appetizer",
+	"flavors": "Lemon Pepper, Mojo, Ranch, Mesquite, Southern Fried",
+	"description": "served with celery and either ranch or blue cheese dressing",
+  "prep": "fried",
+	"price": "11.95 per dozen, 6.95 per half dozen",
+  "add-ons": "Extra dressing $.50 each"
+}, {
+  "name": "Wings - Wet Flavors",
+	"category": "wings starter app appetizer",
+  "flavors": "Buffalo, Buffyaki, Honey Mustard, Honey BBQ, Hot Honey Sriracha, Habanero Reaper, Jerk, Teriyaki",
+	"description": "served with celery and either ranch or blue cheese dressing",
+  "prep": "fried",
+	"price": "11.95 per dozen, 6.95 per half dozen",
+  "add-ons": "Extra dressing $.50 each"
+}, {
+  "name": "Blue Plate Special",
+	"category": "meat and two vegetables lunch",
+  "flavors": "Monday - Pork Chop, Tuesday - Fried Chicken, Wednesday - Pot Roast, Thursday - Country Fried Steak, Friday - Fried Flounder",
+	"description": "Includes a soft drink or iced tea and two sides of the day",
+	"price": "8.50",
+  "add-ons": "Monday - Friday, 11:30am - 4:00pm"
+}, {
+  "name": "Avondale",
+	"category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger bacon pimiento cheese fried green tomato",
+	"description": "with bacon, pimiento cheese, and a fried green tomato",
+	"price": "10.50",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Alpine",
+	"category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger sauteed mushrooms sauteed onions swiss cheese",
+	"description": "with sauteeed mushroooms, onions, and Swiss cheese",
+	"price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Black-n-Blue",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "blackened seasoning burger blue cheese",
+  "description": "blackened seasoned patty topped with crumbled blue cheese",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Left Coast",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger goat cheese avocado roasted red pepper",
+  "description": "with goat cheese, avocado, and roasted red pepper",
+  "price": "10.50",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Mesquite BBQ",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger smoked bacon garlic BBQ sauce",
+  "description": "seasoned patty topped with smoked bacon and garlic BBQ sauce",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Motherload",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger egg pepperjack cheddar cheese sauteed onions",
+  "description": "with bacon, pepperjack, cheddar, sauteed onions, & topped with a fried egg",
+  "price": "10.75",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Ranchburger",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger bacon ranch scallions",
+  "description": "with crumbled bacon, ranch, and scallions",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Southwestern",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger bacon cheddar pepperjack jalapeno fried onion rings BBQ sauce",
+  "description": "bacon, cheddar, pepperjack, jalapeno, BBQ sauce and fried onion rings",
+  "price": "10.75",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Turkey Burger",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger feta cheese garlic sage aioli",
+  "description": "with feta cheese, tomato and onion, and garlic sage aioli",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Classic Burger",
+  "category": "burger hamburger chicken sandwich turkey",
+  "ingredients": "burger sauteed mushrooms sauteed onions swiss cheese",
+  "description": "with lettuce, tomato, and red onion",
+  "price": "7.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Buffalo Chicken Salad",
+  "category": "chicken salad",
+  "ingredients": "chicken lettuce blue cheese tomato red onion celery",
+  "description": "fried or grilled chicken, romaine lettuce, tomato, red onion, blue cheese crumbles, diced celery, & blue cheese dressing",
+  "price": "11.95"
+}, {
+  "name": "Fried Crawfish Salad",
+  "category": " crawfish salad",
+  "ingredients": "crawfish lettuce goat cheese roasted red peppers red onion jalapeno vinaigrette dressing",
+  "description": "romaine lettuce, goat cheese, roasted red peppers, red onion with jalapeno vinaigrette dressing",
+  "price": "11.95"
+}, {
+  "name": "Greek Salad",
+  "category": "salad",
+  "ingredients": "lettuce tomato black olive feta cheese red onion greek dressing",
+  "description": "romaine lettuce, tomato, black olives, feta cheese red onion and greek dressing",
+  "price": "8.95"
+}, {
+  "name": "Side Salad",
+  "category": "salad",
+  "ingredients": "lettuce tomato redonion cucumbers, cheddar jack cheese dressing",
+  "description": "romaine lettuce, tomato, red onion, cucumbers, cheddar & jack cheese with choice of dressing",
+  "price": "4.95",
+  "add-ons": "Add chicken - $4.50 or Fried crawfish tails - $6.00"
+}, {
+  "name": "Dressings - Balsamic Vinaigrette, Blue Cheese, Greek, Jalapeno Vinaigrette, Honey Mustard, Ranch"
+}, {
+  "name": "Buffalo Chicken Sandwich",
+  "category": "sandwich chicken wrap",
+  "ingredients": "chicken blue cheese buffalo sauce",
+  "description": "(fried or grilled) topped with melted blue cheese crumbles on a kaiser roll",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Chicken Pita",
+  "category": "chicken sandwich wrap",
+  "ingredients": "chicken grilled lettuce tomatoes red onion black olive greek dressing pita",
+  "description": "grilled chicken, lettuce tomatoes, red onions, black olives, Greek dressing served on a warm pita",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Bratwurst",
+  "category": "german sandwich wrap",
+  "ingredients": "bratwurst sauerkraut bun",
+  "description": "served with sauerkraut on a bun",
+  "price": "8.50",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Fish Tacos",
+  "category": "fish flounder taco sandwich wrap",
+  "ingredients": "flounder tortilla pepperjack cheese, pico de gallo lettuce",
+  "description": "two soft tortilla tacos stuffed with grilled flounder, pepperjack, pico de gallo & lettuce",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Fried Green Tomato BLT",
+  "category": "sandwich BLT wrap",
+  "ingredients": "bacon fried green tomato lettuce lemon dill mayo",
+  "description": "bacon, lettuce, fried green tomato with lemon dill mayo on white bread",
+  "price": "8.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "The Deliverance",
+  "category": "sandwich wrap",
+  "ingredients": "bologna American cheese cole slaw",
+  "description": "fried bologna topped with cole slaw and American cheese on white bread",
+  "price": "8.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Hot Fried Flounder",
+  "category": "fish flounder sandwich wrap",
+  "ingredients": "flounder cole slaw tartar hot sauce",
+  "description": "topped with cole slaw, tartar sauce, and hot sauce on a kaiser roll",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Pork Chop Sandwich",
+  "category": "pork chop sandwich wrap",
+  "ingredients": "pork chop red onion pepperjack cheese chipotle mayo",
+  "description": "(fried or grilled) with fried red onions, pepperjack cheese with chipotle mayo on a kaiser roll",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Chili Cheese Dogs",
+  "category": "hot dogs sandwich wrap",
+  "ingredients": "hot dogs chili cheddar cheese scallions",
+  "description": "two dogs covered in chili, scallions and cheddar cheese",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Mexiclub",
+  "category": "chicken sandwich wrap",
+  "ingredients": "grilled chicken bacon avocado Cholula cheddar cheese chipotle mayo focaccia",
+  "description": "grilled chicken, bacon, avocado, Cholula cheddar cheese with chipotle mayo on focaccia bread",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Crawfish Po Boy",
+  "category": "crawfish sandwich wrap",
+  "ingredients": " fried crawfish lettuce tomato jalapeno tartar sauce",
+  "description": "fried crawfish tails, jalapeno tartar sauce, lettuce and tomato on a pressed sub roll",
+  "price": "9.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Smoked Turkey",
+  "category": "sandwich turkey wrap famous",
+  "ingredients": "turkey avocado bacon pepperjack cheese chipotle mayo",
+  "description": "with avocado, bacon, pepperjack cheese, with chipotle mayo on a pressed sub roll",
+  "price": "8.95",
+  "add-ons": "choice of french fries, potato salad, cole slaw, or red beans and rice",
+  "subs": "side salad or loaded fries may be substituted for $1.50"
+}, {
+  "name": "Wiener Schnitzel",
+  "category": "entree veal german famous",
+  "ingredients": "veal lobster cream sauce potato cakes cabbage",
+  "description": "breaded and fried veal, served with traditional potato cakes, topped with a lobster cream sauce and a side of steamed cabbage",
+  "price": "13.95"
+}
+]

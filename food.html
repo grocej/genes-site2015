@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Gene's Food</title>
+  <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" media="screen" title="no title" charset="utf-8">
@@ -18,11 +19,33 @@
     </div>
     <!-- <ng-view></ng-view> -->
     <div class="row nav">
-      <div class="col-xs-3"><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></div>
+      <div class="col-xs-1"></div>
+      <div class="col-xs-2"><a href="/main.html"><i class="fa fa-heart fa-3x fa-fw" title="Home!"></i></a></div>
       <div class="col-xs-2"><a href="/beer.html"><i class="fa fa-beer fa-3x fa-fw" title="Beer!"></i></a></div>
       <div class="col-xs-2"><a href="/food.html"><i class="fa fa-cutlery fa-3x fa-fw" title="Food!"></i></a></div>
       <div class="col-xs-2"><a href="/map.html"><i class="fa fa-map fa-3x fa-fw" title="Map!"></i></a></div>
-      <div class="col-xs-3"><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></div>
+      <div class="col-xs-2"><a href="/contact.html"><i class="fa fa-comment fa-3x fa-fw" title="Contact!"></i></a></div>
+      <div class="col-xs-1"></div>
+    </div>
+    <div class="row food" ng-controller="FoodController">
+      <div class="col-xs-1 col-md-2"></div>
+      <div class="col-xs-10 col-md-8" id="menuBox">
+        <p>Scroll down for printable menus!</p>
+        <input type="search" placeholder="start typing here to search our food menu" id="findbeer" ng-model="searchFood">
+        <div>
+          <br>
+          <p class="finding">Finding...</p>
+          <ul ng-show="searchFood">
+            <li class="bList" ng-repeat="menu in menus | filter:searchFood | limitTo:12">
+              <span id="beerName">{{menu.name}}</span>
+              <span id="beerAbv">{{menu.description}}<br>{{menu.add-ons}}<br>{{menu.flavors}}</span>
+              <span id="beerPrice">{{menu.price | currency}}</span>
+            </li>
+          </ul>
+          <p class="moreMay"> ...more may be available.<br> Narrow your search to see!</p>
+        </div>
+      </div>
+      <div class="col-xs-1 col-md-2"></div>
     </div>
 
     <div class="row foot">
@@ -34,42 +57,8 @@
 
   <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
   <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-  <script src="beers.json"></script>
+  <script src="food.json"></script>
   <script src="app.js"></script>
   <script src="service.js"></script>
   <script src="controller.js"></script>
-  </div>
-    <div id="flipbook">
-      <div id="zoom-viewport" class="hard"></div>
-      <div id="zoom-viewport" class="hard"></div>
-      <div id="zoom-viewport"><img src="images/Starters-page.jpg" /></div>
-      <div id="zoom-viewport"><img src="images/Burgers_page.jpg" /></div>
-      <div id="zoom-viewport"><img src="images/Sandwiches_page.jpg" /></div>
-      <!-- <div id="zoom-viewport"><img src="images/Domestic_page.jpg" /></div>
-      <div id="zoom-viewport"><img src="images/Imported_page.jpg" /></div> -->
-    </div>
-    <p id="directions">
-      Click on corners to turn the pages of the menu. <br/> Click on individual pages to zoom in.
-    </p>
-    <!-- <nav "mylogo"></nav> -->
-  </div>
-  </div>
-  <div class="footer">
-  <p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407 <i class="fa fa-facebook-official fa-2x fa-fw"></i></p>
-  <a href="mailto:grocej@gmail.com?subject=I saw the Gene's site!"><img id="mylogo" src="images/G-site_logo02.png" /></a>
-  </div>
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-<script type="text/javascript" src="bower_components/turn.js/turn.js"></script>
-<script type="text/javascript">
-  $('#flipbook').turn({
-      width: 750,
-		  height: 550,
-      acceleration: true,
-      duration: 100
-  }),
-  ("center");
-  $("#zoom-viewport").zoom({
-	flipbook: $("#flipbook"),
-	max: 3
-  });
-</script>
+</body>
