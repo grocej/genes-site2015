@@ -1439,13 +1439,83 @@
           "ingredients": "veal lobster cream sauce potato cakes cabbage",
           "description": "breaded and fried veal, served with traditional potato cakes, topped with a lobster cream sauce and a side of steamed cabbage",
           "price": "13.95"
-          }
+        }, {
+        	"name": "Huevos Rancheros",
+          "category": "brunch",
+          "ingredients": "sunny-side eggs jack cheese tortilla ranchero tomato sauce scallion grits",
+          "description": "*BRUNCH* 2 sunny-side up eggs with tortilla spikes, spicy tomato sauce, jack cheese & scallions with a side of grits",
+          "price": "8.95"
+        }, {
+        	"name": "Chicken and Waffles",
+          "category": "brunch",
+          "ingredients": "fried chicken breast wing waffle maple syrup",
+          "description": "*BRUNCH* 3 southern-fried chicken wings or fried chicken breast with a belgian waffle & syrup",
+          "price": "6.95, 8.95"
+        }, {
+        	"name": "Southern Comfort Plate",
+          "category": "brunch",
+          "ingredients": "scrambled eggs fried green tomatoes blackened shrimp grits",
+          "description": "*BRUNCH* fried green tomatoes, blackened shrimp scrambled eggs & a side of grits ",
+          "price": "10.95"
+        }, {
+        	"name": "Bloody Mary Crawfish Omelette",
+          "category": "brunch",
+          "ingredients": "eggs omelette crawfish bloody mary cream cheese sauce grits",
+          "description": "*BRUNCH* sauteed crawfish with bloody mary cream cheese sauce with a side of grits",
+          "price": "10.95"
+        }, {
+        	"name": "Monte Cristo",
+          "category": "brunch",
+          "ingredients": "sandwich bacon turkey swiss egg maple syrup grits",
+          "description": "*BRUNCH* turkey & swiss dipped in egg & grilled with syrup, bacon & grits",
+          "price": "8.95"
+        }, {
+        	"name": "West Of Omelette",
+          "category": "brunch",
+          "ingredients": "eggs omelette turkey cheese onions green peppers grits",
+          "description": "*BRUNCH* cheese, turkey, onions, green peppers with a side of grits",
+          "price": "8.95"
+        }, {
+        	"name": "Country Fried Steak",
+          "category": "brunch",
+          "ingredients": "sunny side egg country fried steak red bean mashed potatoes gravy ranchero scallion",
+          "description": "*BRUNCH* with red-eye ranchero gravy & a sunny-side up egg on red bean mash with gravy",
+          "price": "10.95"
+        }, {
+        	"name": "\"B.C.B\"",
+        	"category": "brunch",
+        	"ingredients": "scambled eggs bacon grits",
+        	"description": "*BRUNCH* 2 scrambled eggs, bacon with a side of grits",
+        	"price": "5.50"
+        }, {
+        	"name": "Loaded Grits",
+        	"category": "brunch",
+        	"ingredients": "bacon grits scallion cheese sour cream",
+        	"description": "*BRUNCH* bowl of grits with cheese, bacon, scallions topped with sour cream",
+        	"price": "5.95"
+        }, {
+        	"name": "Shrimp Sausage and Grits",
+        	"category": "brunch",
+        	"ingredients": "bacon grits scallion sour cream cheese",
+        	"description": "*BRUNCH* shrimp sausage and grits with gravy, cheese, & scallions",
+        	"price": "10.95"
+        }
         ]
+
         $scope.menus = foodmenu;
         $scope.results = [];
       })
-}());
 
+
+}());
+function initMap() {
+    var mapDiv = document.getElementById('mapBox');
+    var map = new google.maps.Map(mapDiv, {
+        center: {lat: 32.781783, long: -79.985902},
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+  }
 // App.controller('ScoreboardCtrl', function($scope, $http) {
 //   $http.get('scoreboard.json')
 //     .then(function(res){
