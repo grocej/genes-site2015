@@ -1506,16 +1506,17 @@
         $scope.results = [];
       })
 
-
 }());
 function initMap() {
     var mapDiv = document.getElementById('mapBox');
     var map = new google.maps.Map(mapDiv, {
-        center: {lat: 32.781783, long: -79.985902},
+        center: {lat: 32.781783, lng: -79.985902},
         zoom: 18,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
-  }
+    }
+
+
 // App.controller('ScoreboardCtrl', function($scope, $http) {
 //   $http.get('scoreboard.json')
 //     .then(function(res){
