@@ -1449,7 +1449,7 @@
         	"name": "Chicken and Waffles",
           "category": "brunch",
           "ingredients": "fried chicken breast wing waffle maple syrup",
-          "description": "*BRUNCH* 3 southern-fried chicken wings or fried chicken breast with a belgian waffle & syrup",
+          "description": "*BRUNCH* 3 southern-fried chicken wings ($6.95) or fried chicken breast ($8.95) with a belgian waffle & syrup",
           "price": "6.95, 8.95"
         }, {
         	"name": "Southern Comfort Plate",

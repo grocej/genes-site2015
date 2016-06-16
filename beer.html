@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body ng-app="genes">
@@ -37,9 +39,9 @@
           <p class="finding">Finding...</p>
           <ul ng-show="searchBeer">
             <li class="bList" ng-repeat="beer in beers | filter:searchBeer | limitTo:15">
-              <span id="beerName">{{beer.name}}</span>
-              <span id="beerAbv">abv: {{beer.abv}}</span>
-              <span id="beerPrice">{{beer.price | currency}}</span>
+              <span id="beerName" ng-cloak>{{beer.name}}</span>
+              <span id="beerAbv" ng-cloak>abv: {{beer.abv}}</span>
+              <span id="beerPrice" ng-cloak>{{beer.price | currency}}</span>
             </li>
           </ul>
           <p class="moreMay"> ...more may be available.<br> Narrow your search to see!</p>
@@ -49,14 +51,12 @@
     </div>
     <div class="row foot">
       <div class="col-xs-2 col-md-4"></div>
-      <div class="col-xs-8 col-md-4"><p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407  <br><i class="fa fa-facebook-official fa-2x fa-fw"></i></p></div>
+      <div class="col-xs-8 col-md-4"><p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407  <br><i id="facebook" class="fa fa-facebook-official fa-2x fa-fw"></i></p></div>
       <div class="col-xs-2 col-md-4" id="myLogo"><a href="mailto:grocej@gmail.com?subject=I saw the Gene's site!"><img id="mylogo" src="images/G-site_logo02.png" /></a></div>
     </div>
   </div>
 
   <script type="text/javascript" src=bower-components/jquery/dist/jquery.js></script>
-  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/controller.js"></script>
 </body>

@@ -164,7 +164,7 @@ ul {
 .fa:hover {
   transform: scale(1.3);
 }
-.fa fa-facebook-official {
+#facebook {
   margin-top: 15px;
 }
 #findbeer {
@@ -178,6 +178,10 @@ ul {
   border-radius: 14px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+}
+
+.ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
 
 .bList {
