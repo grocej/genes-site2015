@@ -8,7 +8,7 @@
     .config(function ($routeProvider) {
       $routeProvider
       .when('/',{
-        templateUrl: 'main.html'
+        templateUrl: 'index.html'
       })
       .when('/beer', {
         templateUrl: 'beer.html',
