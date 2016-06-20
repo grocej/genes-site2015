@@ -81,6 +81,7 @@ ul {
 #menuBox {
   min-height: 22em;
   margin: 0 auto;
+  position: relative;
 }
 
 #mapBox {
@@ -182,6 +183,10 @@ ul {
 
 .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+.fb-page {
+  margin: auto;
 }
 
 .bList {
