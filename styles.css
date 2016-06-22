@@ -184,7 +184,15 @@ ul {
 .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
-
+.four-link {
+  text-decoration: none;
+}
+.four-link:visited {
+  color: #909090;
+}
+.four-link:hover {
+  color: white;
+}
 .fb-page {
   margin: auto;
 }
