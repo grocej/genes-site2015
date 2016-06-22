@@ -27,7 +27,7 @@
         // controller: 'MainController'
       })
       .when('/404', {
-        template: '<h2>Sorry, page not found</h2>'
+        template: '404.html'
       })
       .otherwise({
         redirectTo: '/404'
