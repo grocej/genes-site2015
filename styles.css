@@ -219,7 +219,20 @@ ul {
 :-ms-input-placeholder {
  color: white;
 }
-
+.chasold {
+  padding-top: 0;
+  margin-top: -10px;
+}
 #directions {
   font-family: 'Montserrat', sans-serif;
+}
+
+/* ------------------------------
+        media queries
+-------------------------------*/
+
+@media only screen and (max-device-width : 767px) and (orientation : portrait) {
+  #findbeer {
+    font-size: 9px;
+  }
 }
