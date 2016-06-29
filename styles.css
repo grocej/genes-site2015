@@ -16,6 +16,10 @@ li {
 ul {
   padding-left: 0px !important;
 }
+a:link {
+  color: #424242;
+  text-decoration: none;
+}
 .container-fluid {
   font-family: 'Montserrat', sans-serif;
   height: 50em;
@@ -33,6 +37,7 @@ ul {
   color: #424242;
 }
 .nav {
+  display: inline-block;
   background-color: #fbea48;
   text-align: center;
   padding-top: 20px;
@@ -154,7 +159,7 @@ ul {
 }
 .fa {
   display: block;
-  vertical-align: middle;
+  vertical-align: center;
   justify-content: center;
   color: #424242;
   text-align: center;
@@ -196,7 +201,13 @@ ul {
 .fb-page {
   margin: auto;
 }
-
+.telnum:hover {
+  color: white;
+  text-decoration: none;
+}
+.telnum:visited {
+  color: #424242;
+}
 .bList {
   text-align: center;
   margin: 0 auto;
@@ -234,5 +245,25 @@ ul {
 @media only screen and (max-device-width : 767px) and (orientation : portrait) {
   #findbeer {
     font-size: 9px;
+  }
+  .mid {
+    height: 12em;
+    background-color: #fbea48;
+    background: url(images/GenesLogo_trans03.png) center center no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    background-size: 650px;
+  }
+  .map {
+    max-height: 12em;
+    background-color: #fbea48;
+    background: url(images/GenesLogo_trans03.png) center center no-repeat;
+    text-align: center;
+    margin: 0 auto;
+    background-size: 650px;
+  }
+  .nav {
+    margin-top: 20px;
+    padding-right: 33px;
   }
 }
