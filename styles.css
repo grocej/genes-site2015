@@ -283,10 +283,14 @@ a:link {
     font-family: 'Montserrat', sans-serif;
     font-size: .7em;
   }
+  .chasold {
+    font-size: 80%;
+  }
   #facebook {
     margin-top: 2px;
   }
   #mylogo {
     display: none;
   }
+
 }
