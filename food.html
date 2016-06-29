@@ -35,12 +35,12 @@
     <div class="row food" ng-controller="FoodController">
       <div class="col-xs-1 col-md-2"></div>
       <div class="col-xs-10 col-md-8" id="menuBox">
-        <p>Scroll down for printable menus!</p>
+    <!--     <p>Scroll down for printable menus!</p> -->
         <input type="search" placeholder="start typing here to search our food menu" id="findbeer" ng-model="searchFood">
         <div>
           <br>
           <p class="finding">Finding...</p>
-          <ul ng-show="searchFood">
+          <ul ng-show="searchFood" ng-cloak>
             <li class="bList" ng-repeat="menu in menus | filter:searchFood | limitTo:14">
               <span id="beerName" ng-cloak>{{menu.name}}</span>
               <span id="beerAbv" ng-cloak>{{menu.description}}<br><!--<span class="add-on">{{menu.add-ons}}<br>{{menu.flavors}}</span>-->
@@ -54,11 +54,15 @@
     </div>
 
     <div class="row foot">
-      <div class="col-xs-2 col-md-4"></div>
-      <div class="col-xs-8 col-md-4"><p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407</p><br>
+      <div class="col-xs-1 col-md-4"></div>
+      <div class="col-xs-10 col-md-4">
+        <p class="foot-addy">817 SAVANNAH HWY CHARLESTON SC 29407</p>
         <br>
-          <p class="chasold">charleston's oldest bar, by far</p><br><a href="http://www.facebook.com/genescharleston"><i id="facebook" class="fa fa-facebook-official fa-2x fa-fw"></i></a></div>
-      <div class="col-xs-2 col-md-4" id="myLogo"><a href="mailto:grocej@gmail.com?subject='I saw the Gene's site!'"><img id="mylogo" src="images/G-site_logo02.png" /></a></div>
+        <p class="chasold">charleston's oldest bar, by far</p>
+        <br>
+        <a href="http://www.facebook.com/genescharleston"><i id="facebook" class="fa fa-facebook-official fa-2x fa-fw"></i></a>
+      </div>
+      <div class="col-xs-1 col-md-4"><a href="http://www.jasongroce.xyz"><img id="mylogo" src="images/G-site_logo02.png" /></a></div>
     </div>
   </div>
 
