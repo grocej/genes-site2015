@@ -243,6 +243,14 @@ a:link {
 -------------------------------*/
 
 @media only screen and (max-device-width : 767px) and (orientation : portrait) {
+  html,
+  .container-fluid,
+  #welcome,
+  .nav,
+  .foot-addy,
+  .row.foot {
+    background-color: #e7d840;
+  }
   #findbeer {
     font-size: 9px;
   }
