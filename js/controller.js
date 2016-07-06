@@ -1123,6 +1123,7 @@
         $scope.beers = beerlist;
         $scope.results = [];
       })
+
     .controller('FoodController', function ($scope) {
 
       var foodmenu = [
@@ -1506,7 +1507,31 @@
         $scope.results = [];
       })
 
+    .controller('HoursController', function ($scope) {
+
+      var hours = function areWeOpen() {
+          var todayDate = new Date();
+          var todayHours = todayDate.getHours();
+          var weekday = todayDate.getDay();
+          var openOrClosed;
+          if (todayHours > 11.5 && todayHours < 2) {
+            openOrClosed = "OPEN";
+            $scope.open = openOrClosed;
+          } else if (weekday === 0 && todayHours > 11 && todayHours < 2) {
+            openOrClosed = "OPEN";
+            $scope.open = openOrClosed;
+          } else {
+            openOrClosed = "CLOSED";
+            $scope.open = openOrClosed;
+          }
+
+        }
+        $scope.open = hours;
+      })
 }());
+
+
+
 function initMap() {
     var mapDiv = document.getElementById('mapBox');
     var map = new google.maps.Map(mapDiv, {

@@ -290,6 +290,7 @@ a:link {
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     font-size: .5em;
+    width: 100%;
   }
   .chasold {
     font-size: 69%;
