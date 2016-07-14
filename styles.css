@@ -237,6 +237,9 @@ a:link {
 #directions {
   font-family: 'Montserrat', sans-serif;
 }
+#openClose {
+  font-size: 1.3em;
+}
 
 /* ------------------------------
         media queries

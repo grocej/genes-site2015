@@ -1509,15 +1509,15 @@
 
     .controller('HoursController', function ($scope) {
 
-      var hours = function areWeOpen() {
+      $scope.hours = function areWeOpen() {
           var todayDate = new Date();
           var todayHours = todayDate.getHours();
           var weekday = todayDate.getDay();
-          var openOrClosed;
-          if (todayHours > 2 && todayHours < 11.5 ) {
+          var openOrClosed = $scope.hours;
+          if (todayHours >= 2 && todayHours <= 11.5 ) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours > 2 && todayHours < 11) {
+          } else if (weekday === 0 && todayHours >= 2 && todayHours <= 11) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {
@@ -1526,7 +1526,7 @@
           }
 
         }
-        $scope.hours = hours;
+
       })
 }());
 
