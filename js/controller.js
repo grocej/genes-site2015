@@ -1514,19 +1514,19 @@
           var todayHours = todayDate.getHours();
           var weekday = todayDate.getDay();
           var openOrClosed;
-          if (todayHours > 11.5 && todayHours < 2) {
-            openOrClosed = "OPEN";
-            $scope.open = openOrClosed;
-          } else if (weekday === 0 && todayHours > 11 && todayHours < 2) {
-            openOrClosed = "OPEN";
-            $scope.open = openOrClosed;
-          } else {
+          if (todayHours > 2 && todayHours < 11.5 ) {
             openOrClosed = "CLOSED";
-            $scope.open = openOrClosed;
+            return openOrClosed;
+          } else if (weekday === 0 && todayHours > 2 && todayHours < 11) {
+            openOrClosed = "CLOSED";
+            return openOrClosed;
+          } else {
+            openOrClosed = "OPEN";
+            return openOrClosed;
           }
 
         }
-        $scope.open = hours;
+        $scope.hours = hours;
       })
 }());
 

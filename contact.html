@@ -40,7 +40,7 @@
       <div class="col-xs-2 col-md-3" id=""></div>
       <div class="col-xs-8 col-md-6" id="menuBox">
         <p>Hours: 11:30am - 2am, Monday - Saturday<br>11am - 2am, Sunday<br>Brunch 11am - around 3pm, Sunday</p>
-        <p class="hours" ng-controller="HoursController"> We are currently {{open}} </p>
+        <p class="hours" ng-controller="HoursController as hours"> We are currently {{hours.hours}} </p>
         <p class="togo">Place a To Go Order anytime between 11:30am until 1am,<br> 7 days a week!</p><span><h6>** no to go orders for brunch items, sorry!</h6></span>
         <br>
           <span class="phone">Call <a class= "telnum" href="tel:+8432254363">843.225.4363</a></span><br/ ><br />or come see us at:<br /><br />
