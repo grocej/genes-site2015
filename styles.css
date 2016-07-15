@@ -245,6 +245,7 @@ a:link {
   min-height: 22em;
   margin: 0 auto;
   position: relative;
+  display: inline-flex;
 }
 
 /* ------------------------------

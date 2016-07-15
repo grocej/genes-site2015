@@ -40,7 +40,9 @@
     </div>
     <div class="row food" ng-controller="FoodController">
       <div class="col-xs-1 col-md-2"></div>
+      <!-- TO BE SHOWN UNLESS #visMenu is clicked -->
       <div class="col-xs-10 col-md-8" id="menuBox">
+        <p ng-controller="HoursController"><span id="openClose" ng-cloak>{{ lastCall() }}</span></p>
         <input type="search" placeholder="start typing here to search our food menu" id="findbeer" ng-model="searchFood">
         <div>
           <br>
@@ -54,6 +56,7 @@
           </ul>
           <p class="moreMay"> ...more may be available.<br> Narrow your search to see!</p>
         </div>
+        <!-- CLICK TO HIDE SEARCH FUNCTION & SHOW VISUAL MENUS -->
         <div id="visMenu">
 
         </div>

@@ -1516,10 +1516,10 @@
           var todayTime = todayHours + ":" + todayMinutes;
           var weekday = todayDate.getDay();
           var openOrClosed = $scope.hours;
-          if (todayHours >= 2 && todayHours <= 11.5 ) {
+          if (todayHours >= "2:0:0" && todayHours <= "11:30:0" ) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours >= 2 && todayHours <= 11) {
+          } else if (weekday === 0 && todayHours >= "2:0:0" && todayHours <= "11:0:0") {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {
