@@ -1540,8 +1540,8 @@
           if (todayTime >= "0:30:0" && todayTime <= "0:59:59" ) {
             openOrClosed = "KITCHEN CLOSES VERY SOON!";
             return openOrClosed;
-          } else if (todayHours >= "1:30:0" && todayHours <= "1:44:59" ) {
-            openOrClosed = "LAST CALL, Y'ALL!";
+          } else if (todayTime >= "1:30:0" && todayTime <= "1:44:59" ) {
+            openOrClosed = "IT'S LAST CALL, Y'ALL!";
             return openOrClosed;
           }
         }
