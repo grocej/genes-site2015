@@ -240,6 +240,12 @@ a:link {
 #openClose {
   font-size: 1.3em;
 }
+#visMenu {
+  background-color: #e1d242;
+  min-height: 22em;
+  margin: 0 auto;
+  position: relative;
+}
 
 /* ------------------------------
         media queries
