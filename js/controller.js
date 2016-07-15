@@ -1128,86 +1128,84 @@
 
       var foodmenu = [
         {
-        	"name": "Artichoke Dip *",
+        	"name": "Artichoke Dip",
         	"category": "starter app appetizer",
         	"ingredients": "artichoke pita wedges",
         	"description": "served with toasted pita wedges",
         	"price": "8.95",
           "prep": "baked",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
-          "name": "Fried Green Tomatoes *",
+          "name": "Fried Green Tomatoes",
         	"category": "starter app appetizer",
         	"ingredients": "fried green tomatoes pimiento cheese",
         	"description": "served with house-made pimiento cheese",
           "prep": "fried",
         	"price": "7.95",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
           "name": "Cajun Fried Crawdads",
         	"category": "starter app appetizer",
         	"ingredients": "crawdad tails jalapeno tartar sauce",
         	"description": "served with jalapeno tartar sauce",
           "prep": "fried",
-        	"price": "10.50",
-          "happy hour": false
+        	"price": "10.50"
         }, {
-          "name": "Fried Mushrooms *",
+          "name": "Fried Mushrooms",
         	"category": "starter app appetizer",
         	"ingredients": "mushrooms beer batter ranch dressing",
         	"description": "deep fried in beer batter with a side of ranch",
           "prep": "fried",
         	"price": "7.95",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
-          "name": "Chicken Fingers *",
+          "name": "Chicken Fingers",
         	"category": "starter app appetizer",
         	"ingredients": "chicken honey mustard",
         	"description": "served with honey mustard",
           "prep": "fried",
         	"price": "8.50",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
-          "name": "Chicken Quesadilla *",
+          "name": "Chicken Quesadilla",
         	"category": "starter app appetizer",
         	"ingredients": "chicken jack cheese green peppers onions pico de gallo sour cream",
         	"description": "tortillas stuffed with chicken, jack cheese, green peppers and onions, served with pico de gallo and sour cream",
           "prep": "grilled",
         	"price": "8.50",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
           "name": "Corn Dogs",
         	"category": "starter app appetizer",
         	"ingredients": "corn dogs spicy mustard",
         	"description": "two regular-sized dogs, served with spicy mustard",
           "prep": "fried",
-        	"price": "4.95",
-          "happy hour": false
+        	"price": "4.95"
         }, {
-          "name": "Roasted Red Pepper Hummus *",
+          "name": "Roasted Red Pepper Hummus",
         	"category": "starter app appetizer",
         	"ingredients": "hummus pita wedges",
         	"description": "with diced cucumbers, served with pita wedges",
           "prep": "grilled",
         	"price": "7.95",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
-          "name": "Vegetable Spring Rolls *",
+          "name": "Vegetable Spring Rolls",
         	"category": "starter app appetizer",
         	"ingredients": "spring rolls sesame dressing spicy mustard",
         	"description": "served with sesame dressing and spicy mustard",
           "prep": "fried",
         	"price": "7.95",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
-          "name": "Loaded Fries *",
+          "name": "Loaded Fries",
         	"category": "starter app appetizer",
         	"ingredients": "french fries bacon cheddar cheese scallions ranch dressing",
         	"description": "with melted cheddar, bacon, scallions, and a side of ranch",
           "prep": "fried",
         	"price": "9.95",
           "add-ons": "Add sour cream or jalapenos for $.75 each",
-          "happy hour": true
+          "happy hour": "happy hour"
         }, {
           "name": "Wings - Dry Flavors",
         	"category": "wings starter app appetizer",
@@ -1513,13 +1511,16 @@
           var todayDate = new Date();
           var todayHours = todayDate.getHours();
           var todayMinutes = todayDate.getMinutes();
-          var todayTime = todayHours + ":" + todayMinutes;
+          var todaySeconds = todayDate.getSeconds();
+          var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
           var weekday = todayDate.getDay();
           var openOrClosed = $scope.hours;
-          if (todayHours >= "2:0:0" && todayHours <= "11:30:0" ) {
+          console.log(todayHours + todayMinutes);
+          console.log(todayTime);
+          if (todayHours >= 2 && todayHours <= 11.5 ) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours >= "2:0:0" && todayHours <= "11:0:0") {
+          } else if (weekday === 0 && todayHours >= 2 && todayHours<= 11) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {

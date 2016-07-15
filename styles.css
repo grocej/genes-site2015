@@ -178,6 +178,8 @@ a:link {
 .foodmenu {
   max-height: 18em;
   text-align: center;
+  background-color: white;
+  margin: 25px 15px;
 }
 .foodmenu:hover {
   transform: scale(1.3);
