@@ -1509,9 +1509,11 @@
 
     .controller('HoursController', function ($scope) {
 
-      $scope.hours = function areWeOpen() {
+      $scope.hours = function () {
           var todayDate = new Date();
           var todayHours = todayDate.getHours();
+          var todayMinutes = todayDate.getMinutes();
+          var todayTime = todayHours + ":" + todayMinutes;
           var weekday = todayDate.getDay();
           var openOrClosed = $scope.hours;
           if (todayHours >= 2 && todayHours <= 11.5 ) {
@@ -1527,9 +1529,24 @@
 
         }
 
+      $scope.lastCall = function () {
+          var todayDate = new Date();
+          var todayHours = todayDate.getHours();
+          var todayMinutes = todayDate.getMinutes();
+          var todaySeconds = todayDate.getSeconds();
+          var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
+          var weekday = todayDate.getDay();
+          var openOrClosed = $scope.lastCall;
+          if (todayHours >= "12:45:0" && todayHours <= "12:59:59" ) {
+            openOrClosed = "KITCHEN CLOSES VERY SOON!";
+            return openOrClosed;
+          } else if (todayHours >= "1:30:0" && todayHours <= "1:44:59" ) {
+            openOrClosed = "LAST CALL, Y'ALL!";
+            return openOrClosed;
+          }
+        }
       })
 }());
-
 
 
 function initMap() {
