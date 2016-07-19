@@ -1517,10 +1517,10 @@
           var openOrClosed = $scope.hours;
           console.log(todayHours + todayMinutes);
           console.log(todayTime);
-          if (todayHours >= 2 && todayTime <= "11:29:59" ) {
+          if (todayHours >= 2 && todayHours <= 11 && todayMinutes < 30 ) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours >= 2 && todayHours<= 11) {
+          } else if (weekday === 0 && todayHours >= 2 && todayHours<= 11 && todayMinutes >= 0) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {
