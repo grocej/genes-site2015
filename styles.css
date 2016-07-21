@@ -367,5 +367,17 @@ a:link {
   #mylogo {
     display: none;
   }
+  .lightbox img {
+  	max-height: 77%;
+  	margin-top: 15%;
+  }
+  #visMenu {
+    border-radius: 8px;
+    min-height: 80%
+    margin: 0 auto;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+  }
 
 }
