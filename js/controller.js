@@ -1515,10 +1515,9 @@
           var todaySeconds = todayDate.getSeconds();
           var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
           var openOrClosed = $scope.hours;
-          console.log(todayHours + todayMinutes);
           console.log(todayTime);
           // console.log(todayHours >= 2 && todayHours <= 11 + todayMinutes <= 30);
-          if (todayHours >= 2 || (todayHours == 11 && todayMinutes < 30)) {
+          if (todayHours >= 2 && (todayHours == 11 && todayMinutes < 30)) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else if (weekday === 0 && todayHours >= 2 || (todayHours > 10 && todayMinutes > 59)) {
