@@ -1207,20 +1207,20 @@
           "add-ons": "Add sour cream or jalapenos for $.75 each",
           "happy hour": "happy hour"
         }, {
-          "name": "Wings - Dry Flavors",
+          "name": "Wings - Dry Flavors: Lemon Pepper, Mojo, Ranch, Mesquite, Southern Fried.",
         	"category": "wings starter app appetizer",
         	"flavors": "Lemon Pepper, Mojo, Ranch, Mesquite, Southern Fried",
-        	"description": "served with celery and either ranch or blue cheese dressing",
+        	"description": "WHOLE and HALF dozens available, served with celery and either ranch or blue cheese dressing",
           "prep": "fried",
-        	"price": "11.95 per dozen, 6.95 per half dozen",
+        	"price": "11.95",
           "add-ons": "Extra dressing $.50 each"
         }, {
-          "name": "Wings - Wet Flavors",
+          "name": "Wings - Wet Flavors: Buffalo, Buffyaki, Honey Mustard, Honey BBQ, Hot Honey Sriracha, Habanero Reaper, Jerk, Teriyaki.",
         	"category": "wings starter app appetizer",
           "flavors": "Buffalo, Buffyaki, Honey Mustard, Honey BBQ, Hot Honey Sriracha, Habanero Reaper, Jerk, Teriyaki",
-        	"description": "served with celery and either ranch or blue cheese dressing",
+        	"description": "WHOLE and HALF dozens available, served with celery and either ranch or blue cheese dressing",
           "prep": "fried",
-        	"price": "11.95 per dozen, 6.95 per half dozen",
+        	"price": "11.95",
           "add-ons": "Extra dressing $.50 each"
         }, {
           "name": "Blue Plate Special",
@@ -1509,18 +1509,19 @@
 
       $scope.hours = function () {
           var todayDate = new Date();
+          var weekday = todayDate.getDay();
           var todayHours = todayDate.getHours();
           var todayMinutes = todayDate.getMinutes();
           var todaySeconds = todayDate.getSeconds();
           var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
-          var weekday = todayDate.getDay();
           var openOrClosed = $scope.hours;
           console.log(todayHours + todayMinutes);
           console.log(todayTime);
-          if (todayHours >= 2 && todayHours <= 11 && todayMinutes < 30 ) {
+          // console.log(todayHours >= 2 && todayHours <= 11 + todayMinutes <= 30);
+          if (todayHours >= 2 || (todayHours == 11 && todayMinutes < 30)) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours >= 2 && todayHours<= 11 && todayMinutes >= 0) {
+          } else if (weekday === 0 && todayHours >= 2 || (todayHours > 10 && todayMinutes > 59)) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {
