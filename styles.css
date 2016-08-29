@@ -85,6 +85,9 @@ a:link {
   height: 50em;
   white-space: nowrap;
 }
+.ng-cloak {
+  display: none !important;
+}
 .menuThumb {
   width: 50px;
 }
@@ -338,7 +341,6 @@ a:link {
   }
   .nav {
     margin-top: 20px;
-    padding-right: 33px;
   }
   #welcome {
     margin-top: 15px;
