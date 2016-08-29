@@ -1571,10 +1571,19 @@ function initMap() {
         position: {lat: 32.781783, lng: -79.985902},
         map: map,
         label: labels,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
         title: 'Gene\'s!'});
+        marker.addListener('click', toggleBounce);
     }
 
-
+function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+  }
 // App.controller('ScoreboardCtrl', function($scope, $http) {
 //   $http.get('scoreboard.json')
 //     .then(function(res){
