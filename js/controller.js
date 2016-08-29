@@ -1509,6 +1509,7 @@
 
       $scope.hours = function () {
           var todayDate = new Date();
+          console.log(todayDate);
           var weekday = todayDate.getDay();
           var todayHours = todayDate.getHours();
           var todayMinutes = todayDate.getMinutes();
@@ -1516,19 +1517,25 @@
           var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
           var openOrClosed = $scope.hours;
           console.log(todayTime);
+          console.log(todayHours);
+          console.log(todayMinutes);
+          console.log(todaySeconds);
+          console.log(weekday);
           // console.log(todayHours >= 2 && todayHours <= 11 + todayMinutes <= 30);
-          if (todayHours >= 2 && (todayHours == 11 && todayMinutes > 30)) {
+          if (todayHours >= 2 && (todayHours < 11 && todayMinutes < 30)) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours >= 2 || (todayHours > 10 && todayMinutes > 59)) {
+          } else if (weekday === 0 && todayHours > 2 || (todayHours > 10 && todayMinutes > 59)) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {
             openOrClosed = "OPEN";
             return openOrClosed;
           }
-
         }
+      })
+
+    .controller('LastCallController', function ($scope) {
 
       $scope.lastCall = function () {
           var todayDate = new Date();
@@ -1537,7 +1544,6 @@
           var todaySeconds = todayDate.getSeconds();
           var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
           var openOrClosed = $scope.lastCall;
-          console.log(todayTime);
           if (todayTime >= "0:30:0" && todayTime <= "0:59:59" ) {
             openOrClosed = "KITCHEN CLOSES VERY SOON!";
             return openOrClosed;
