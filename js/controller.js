@@ -1558,12 +1558,20 @@
 
 
 function initMap() {
+    var labels = 'G';
     var mapDiv = document.getElementById('mapBox');
+
     var map = new google.maps.Map(mapDiv, {
         center: {lat: 32.781783, lng: -79.985902},
         zoom: 18,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
+
+    var marker = new google.maps.Marker({
+        position: {lat: 32.781783, lng: -79.985902},
+        map: map,
+        label: labels,
+        title: 'Gene\'s!'});
     }
 
 
