@@ -269,6 +269,21 @@ a:link {
   display: inline-flex;
 }
 /* ------------------------------
+        carousel boxes
+-------------------------------*/
+
+#owl-demo {
+  display: block;
+}
+#owl-demo .item {
+  margin: 3px;
+}
+#owl-demo .item img{
+  min-height: 4em;
+  min-width: 4em;
+}
+
+/* ------------------------------
         food menu lightbox
 -------------------------------*/
 #or {
@@ -341,6 +356,7 @@ a:link {
   }
   .nav {
     margin-top: 20px;
+    padding-right: 55px;
   }
   #welcome {
     margin-top: 15px;
