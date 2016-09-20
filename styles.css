@@ -357,6 +357,7 @@ a:link {
   .nav {
     margin-top: 20px;
     padding-right: 55px;
+    display: inline;
   }
   #welcome {
     margin-top: 15px;
@@ -397,5 +398,6 @@ a:link {
     display: inline-flex;
     flex-direction: column;
   }
+
 
 }
