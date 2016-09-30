@@ -315,23 +315,19 @@
 	"name": "Huevos Rancheros",
   "category": "brunch",
   "ingredients": "sunny-side eggs jack cheese tortilla ranchero tomato sauce scallion grits",
-  "description": "*BRUNCH* 2 sunny-side up eggs with tortilla spikes,
-			spicy tomato sauce, jack cheese & scallions
-			with a side of grits",
+  "description": "*BRUNCH* 2 sunny-side up eggs with tortilla spikes, spicy tomato sauce, jack cheese & scallions with a side of grits",
   "price": "8.95"
 }, {
 	"name": "Chicken and Waffles",
   "category": "brunch",
   "ingredients": "fried chicken breast wing waffle maple syrup",
-  "description": "*BRUNCH* 3 southern-fried chicken wings or fired chicken breast
-	with a belgian waffle & syrup",
+  "description": "*BRUNCH* 3 southern-fried chicken wings or fired chicken breast with a belgian waffle & syrup",
   "price": "6.95(wings) or 8.95(breast)"
 }, {
 	"name": "Southern Comfort Plate",
   "category": "brunch",
   "ingredients": "scrambled eggs fried green tomatoes blackened shrimp grits",
-  "description": "*BRUNCH* fried green tomatoes, blackened shrimp
-scambled eggs & a side of grits ",
+  "description": "*BRUNCH* fried green tomatoes, blackened shrimp scrambled eggs & a side of grits ",
   "price": "10.95"
 }, {
 	"name": "Bloody Mary Crawfish Omelette",

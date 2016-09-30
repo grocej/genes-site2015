@@ -1508,24 +1508,26 @@
     .controller('HoursController', function ($scope) {
 
       $scope.hours = function () {
+
           var todayDate = new Date();
+          var openOrClosed = $scope.hours;
           console.log(todayDate);
           var weekday = todayDate.getDay();
           var todayHours = todayDate.getHours();
           var todayMinutes = todayDate.getMinutes();
           var todaySeconds = todayDate.getSeconds();
           var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
-          var openOrClosed = $scope.hours;
+
           console.log(todayTime);
           console.log(todayHours);
           console.log(todayMinutes);
           console.log(todaySeconds);
           console.log(weekday);
           // console.log(todayHours >= 2 && todayHours <= 11 + todayMinutes <= 30);
-          if (todayHours >= 2 && (todayHours < 11 && todayMinutes < 30)) {
+          if (todayHours >= 2 && todayHours < 11 && todayMinutes < 30) {
             openOrClosed = "CLOSED";
             return openOrClosed;
-          } else if (weekday === 0 && todayHours > 2 || (todayHours > 10 && todayMinutes > 59)) {
+          } else if (weekday === 0 && todayHours > 2 || todayHours > 10 && todayMinutes > 59) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else {
@@ -3115,11 +3117,3 @@ function toggleBounce() {
     });
 
   });
-
-// App.controller('ScoreboardCtrl', function($scope, $http) {
-//   $http.get('scoreboard.json')
-//     .then(function(res){
-//       // Storing the json data object as 'scores'
-//       $scope.scores = res.data;
-//     });
-// });
