@@ -126,13 +126,6 @@
       			"abv": "4.9%",
       			"price": "5.00"
       		}, {
-      			"name": "Hofbrau Hefe",
-      			"country": "Germany",
-      			"style": "wheat hefeweizen",
-      			"container": "bottle",
-      			"abv": "5.4%",
-      			"price": "5.00"
-      		}, {
       			"name": "Imperial",
       			"country": "Costa Rica",
       			"style": "lager",
@@ -742,13 +735,6 @@
       			"abv": "5.8%",
       			"price": "4.50"
       		}, {
-      			"name": "Highland Kashmir",
-      			"brewer": "Highland",
-      			"country": "USA",
-      			"style": "pale ale IPA",
-      			"abv": "6.0%",
-      			"price": "4.50"
-      		}, {
       			"name": "Highland Oatmeal Porter",
       			"brewer": "Highland",
       			"country": "USA",
@@ -818,6 +804,13 @@
       			"style": "fruit ale",
       			"abv": "5.1%",
       			"price": "4.50"
+      		}, {
+      			"name": "Blue Dream IPA",
+      			"brewer": "Oskar Blues",
+      			"country": "USA",
+      			"style": "IPA",
+      			"abv": "6.43% ",
+      			"price": "5.00"
       		}, {
       			"name": "Mama's Little Yella Pils",
       			"brewer": "Oskar Blues",
@@ -1517,14 +1510,7 @@
           var todayMinutes = todayDate.getMinutes();
           var todaySeconds = todayDate.getSeconds();
           var todayTime = todayHours + ":" + todayMinutes + ":" + todaySeconds;
-
-          console.log(todayTime);
-          console.log(todayHours);
-          console.log(todayMinutes);
-          console.log(todaySeconds);
-          console.log(weekday);
-          // console.log(todayHours >= 2 && todayHours <= 11 + todayMinutes <= 30);
-          if (todayHours >= 2 && todayHours < 11 && todayMinutes < 30) {
+          if ((todayHours >== 2 && todayHours < 11) && todayMinutes < 30) {
             openOrClosed = "CLOSED";
             return openOrClosed;
           } else if (weekday === 0 && todayHours > 2 || todayHours > 10 && todayMinutes > 59) {
